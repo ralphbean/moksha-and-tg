@@ -7,6 +7,7 @@ from tg.render import render
 from pylons.i18n import _, ungettext, N_
 
 import moksha.lib.base
+import mokshaandtg.widgets
 
 __all__ = ['BaseController']
 
@@ -28,5 +29,6 @@ class BaseController(TGController):
 
         # I want to use my own lib/base
         tmpl_context.globs = moksha.lib.base.global_resources()
+        tmpl_context.notif = mokshaandtg.widgets.NotificationWidget(id='foo').display()
 
         return TGController.__call__(self, environ, start_response)
