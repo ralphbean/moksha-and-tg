@@ -6,6 +6,7 @@
     <title>${self.title()}</title>
     <link rel="stylesheet" type="text/css" media="screen" href="${tg.url('/css/style.css')}" />
     <link rel="stylesheet" type="text/css" media="screen" href="${tg.url('/css/admin.css')}" />
+	${c.globs | n}
 </head>
 <body class="${self.body_class()}">
   ${self.header()}

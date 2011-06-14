@@ -6,6 +6,8 @@ from tg import TGController, tmpl_context
 from tg.render import render
 from pylons.i18n import _, ungettext, N_
 
+import moksha.lib.base
+
 __all__ = ['BaseController']
 
 
@@ -23,5 +25,8 @@ class BaseController(TGController):
         # TGController.__call__ dispatches to the Controller method
         # the request is routed to. This routing information is
         # available in environ['pylons.routes_dict']
+
+        # I want to use my own lib/base
+        tmpl_context.globs = moksha.lib.base.global_resources()
 
         return TGController.__call__(self, environ, start_response)
