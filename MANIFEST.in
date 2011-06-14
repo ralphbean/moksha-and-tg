@@ -1,0 +1,4 @@
+recursive-include mokshaandtg/public *
+include mokshaandtg/public/favicon.ico
+recursive-include mokshaandtg/i18n *
+recursive-include mokshaandtg/templates *

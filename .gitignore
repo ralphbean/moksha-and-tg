@@ -1,0 +1,10 @@
+*.pyc
+*.swp
+ez_setup
+tw2*
+devdata.db*
+data
+build
+dist
+*.egg*
+README.pdf
