@@ -7,6 +7,5 @@ class GarbageProducer(PollingProducer):
     jsonify = True
 
     def poll(self):
-        self.log.info("Sending message on topic 'foobar'")
         self.send_message('foobar', {'message': 'oh hai there'})
 
