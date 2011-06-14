@@ -50,5 +50,9 @@ setup(
 
     [paste.app_install]
     main = pylons.util:PylonsInstaller
+
+    [moksha.stream]
+    series_pro = mokshaandtg.producers:GarbageProducer
+
     """,
 )
