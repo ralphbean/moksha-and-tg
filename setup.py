@@ -54,5 +54,10 @@ setup(
     [moksha.stream]
     series_pro = mokshaandtg.producers:GarbageProducer
 
+    [moksha.widget]
+    garbage = mokshaandtg.widgets:NotificationWidget
+
+
+
     """,
 )
