@@ -27,9 +27,9 @@ class BaseController(TGController):
         # the request is routed to. This routing information is
         # available in environ['pylons.routes_dict']
 
-        # I want to use my own lib/base
-        tmpl_context.globs = moksha.lib.base.global_resources()
         #tmpl_context.notif = mokshaandtg.widgets.NotificationWidget(id='foo').display()
         tmpl_context.notif = moksha.utils.get_widget('garbage').display()
+        # I want to use my own lib/base
+        tmpl_context.globs = moksha.lib.base.global_resources()
 
         return TGController.__call__(self, environ, start_response)
